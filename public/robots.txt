@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abtalks-challenge.web.app/sitemap.xml
