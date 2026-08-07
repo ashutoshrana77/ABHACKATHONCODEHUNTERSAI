@@ -1,0 +1,7 @@
+# Remove committed node_modules
+
+This commit removes the repository's committed node_modules directory which can cause platform-specific build issues and bloats the repo.
+
+Files removed: node_modules/ (entire tree)
+
+Also ensure package-lock.json stays committed for deterministic installs.
