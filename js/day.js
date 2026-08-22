@@ -684,7 +684,7 @@ function bindEvents() {
     item.addEventListener('click', () => {
       const isChecked = item.classList.toggle('checked');
       completedObjs += isChecked ? 1 : -1;
-      objCounter.textContent = \`\${completedObjs}/\${dayData.objectives.length} completed\`;
+      objCounter.textContent = `${completedObjs}/${dayData.objectives.length} completed`;
     });
   });
 
@@ -695,8 +695,8 @@ function bindEvents() {
   const liError = document.getElementById('liError');
   const submitBtn = document.getElementById('submitBtn');
   
-  const isValidGH = (url) => /^https?:\\/\\/(www\\.)?github\\.com\\/.+/i.test(url);
-  const isValidLI = (url) => /^https?:\\/\\/(www\\.)?linkedin\\.com\\/.+/i.test(url);
+  const isValidGH = (url) => /^https?:\/\/(www\.)?github\.com\/.+/i.test(url);
+  const isValidLI = (url) => /^https?:\/\/(www\.)?linkedin\.com\/.+/i.test(url);
 
   const validateInputs = () => {
     const ghVal = ghInput.value.trim();
@@ -736,7 +736,7 @@ function bindEvents() {
   const notes = document.getElementById('notes');
   const charCount = document.getElementById('charCount');
   notes.addEventListener('input', () => {
-    charCount.textContent = \`\${notes.value.length}/500\`;
+    charCount.textContent = `${notes.value.length}/500`;
   });
 
   // Submission
@@ -772,7 +772,7 @@ function createConfetti() {
     
     el.animate([
       { transform: 'translate(0,0) scale(1)', opacity: 1 },
-      { transform: \`translate(\${tx}px, \${ty}px) scale(0)\`, opacity: 0 }
+      { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
     ], {
       duration: 1000 + Math.random() * 1000,
       easing: 'cubic-bezier(0.25, 1, 0.5, 1)'
